@@ -1,0 +1,15 @@
+# Assumes the environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY have been set
+# You should also edit the source and destination buckets to match your stack
+
+docker volume rm bakery
+docker volume create bakery
+
+docker run -it --rm `
+   -e AWS_ACCESS_KEY_ID=!!KEY_ID!! `
+   -e AWS_SECRET_ACCESS_KEY=!!SECRET_ACCESS_KEY_ID" `
+   -e RENDER_SOURCE_BUCKET=new-blender-stack-renderblendbucket-1goowrnpqzx98 `
+   -e RENDER_DEST_BUCKET=new-blender-stack-renderresultsbucket-1slpxivgf2izt `
+   -v bakery:/mnt `
+   elmorino/blender_bakery:latest `
+   -j 2020-12-07_21-05-03_smokey `
+

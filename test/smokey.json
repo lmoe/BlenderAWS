@@ -1,0 +1,16 @@
+{
+  "scene": {
+    "frame_step": 1,
+    "frame_start": 1
+  },
+  "render": {
+    "tile_x": 256,
+    "tile_y": 256
+  },
+  "eevee": {
+    "volumetric_shadow_samples": 64,
+    "volumetric_tile_size": "2"
+  },
+  "cycles": {},
+  "bake": true
+}
