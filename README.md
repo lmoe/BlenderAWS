@@ -15,6 +15,8 @@ The manifest file can overwrite blender properties (https://docs.blender.org/api
 
 The management application was rewritten in .NET Core and the Batch structure was changed to read a JSON string instead of using batch arguments. This makes it easier to configure and overwrite each render/bake.
 
+If a bake is required, the installation will try to send the package to the bakery machine, which sends the package with the bake files to the rendering machine.
+
 Currently I can't really offer a readme. Take a look into the source code until then.
 
 ## Usage
